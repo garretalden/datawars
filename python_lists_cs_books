@@ -1,0 +1,41 @@
+# Python List with Computer Science Books
+
+# 1
+def unique_list_elements(input_list):
+    unique = []
+    for i in range(len(input_list)):
+        if input_list[i] not in unique:
+            unique.append(input_list[i])
+    return unique
+
+# 2
+def get_common(input_list_1, input_list_2):
+    common = []
+    for i in range(len(input_list_1)):
+        if input_list_1[i] in input_list_2:
+            common.append(input_list_1[i])
+    return common
+
+# 3
+def get_average(input_list):
+    s = 0
+    for i in range(len(input_list)):
+        s += input_list[i]
+    avg = s/len(input_list)
+    return avg
+# 4
+def sort_alphabets(input):
+    for i in range(len(input)-1):
+        if input[i] > input[i+1]:
+            tmp = input[i]
+            input[i] = input[i+1]
+            input[i+1] = tmp
+            sort_alphabets(input)
+    return input
+
+# 5
+def square_list(input_list):
+    sqr = []
+    for i in range(len(input_list)):
+        sqr.append(input_list[i]**2)
+    return sqr
